@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Palle Martin Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../portfolio-project/index.html">
+                <span class="material-icons me-2">code</span>
+                <span>Palle Martin</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio-project/index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio-project/index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio-project/index.html#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio-project/index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio-project/index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form Section -->
+    <section class="login-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow-lg border-0 rounded-3 animate__animated animate__fadeInUp">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="avatar bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                                    <span class="material-icons fs-1">lock</span>
+                                </div>
+                                <h2 class="fw-bold">Welcome Back</h2>
+                                <p class="text-muted">Sign in to continue to your account</p>
+                            </div>
+                            
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><span class="material-icons">email</span></span>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><span class="material-icons">lock</span></span>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                        <button class="btn btn-outline-secondary toggle-password" type="button" id="togglePassword">
+                                            <span class="material-icons eye-icon">visibility_off</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none">Forgot password?</a>
+                                </div>
+                                
+                                <div class="d-grid mb-3">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Sign In</button>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <p class="mb-0">Don't have an account? <a href="register.html" class="text-decoration-none fw-medium">Register here</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Palle Martin</h5>
+                    <p class="text-muted">AIML Student & Full-Stack Developer</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Palle Martin. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
