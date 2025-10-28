@@ -1,0 +1,82 @@
+<?php
+// Database configuration
+// This file will attempt to connect to the database with common configurations
+// If all attempts fail, it will provide helpful error messages
+
+// Default configuration (you can modify these values)
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'user_management');
+
+// Create connection with multiple fallback options
+$connection_errors = [];
+$conn = null;
+
+// List of password attempts
+$password_attempts = [
+    DB_PASS,      // Configured password
+    '',           // Empty password
+    'root',       // Common root password
+    'password',   // Common password
+    'admin',      // Admin password
+    '1234',       // Simple numeric password
+    '123456'      // Another simple numeric password
+];
+
+// Try each password combination
+foreach ($password_attempts as $password) {
+    try {
+        $conn = new mysqli(DB_HOST, DB_USER, $password, DB_NAME);
+        if (!$conn->connect_error) {
+            // Successfully connected
+            break;
+        } else {
+            $connection_errors[] = "Connection failed with password '" . (empty($password) ? '(empty)' : $password) . "': " . $conn->connect_error;
+        }
+    } catch (Exception $e) {
+        $connection_errors[] = "Exception with password '" . (empty($password) ? '(empty)' : $password) . "': " . $e->getMessage();
+    } catch (Error $e) {
+        $connection_errors[] = "Error with password '" . (empty($password) ? '(empty)' : $password) . "': " . $e->getMessage();
+    }
+}
+
+// If all attempts failed, show error message
+if ($conn === null || $conn->connect_error) {
+    $error_message = "=== DATABASE CONNECTION ERROR ===\n\n";
+    $error_message .= "Unable to connect to the database with any configuration.\n\n";
+    $error_message .= "Current configuration:\n";
+    $error_message .= "- Host: " . DB_HOST . "\n";
+    $error_message .= "- Database: " . DB_NAME . "\n";
+    $error_message .= "- User: " . DB_USER . "\n";
+    $error_message .= "- Password: " . (empty(DB_PASS) ? '(empty)' : '(set)') . "\n\n";
+    
+    $error_message .= "Troubleshooting steps:\n";
+    $error_message .= "1. Make sure MySQL is running\n";
+    $error_message .= "2. Verify the database 'user_management' exists\n";
+    $error_message .= "3. Check that the user '" . DB_USER . "' has access to the database\n";
+    $error_message .= "4. Verify the username and password are correct\n\n";
+    
+    $error_message .= "Solutions:\n";
+    $error_message .= "1. Run the configuration wizard: php config_wizard.php\n";
+    $error_message .= "2. Check DATABASE_SETUP.md for detailed instructions\n";
+    $error_message .= "3. Test connections with: php mysql_test.php\n\n";
+    
+    $error_message .= "For immediate help, contact your system administrator.\n";
+    
+    // Output the error message both as plain text and HTML
+    if (php_sapi_name() !== 'cli') {
+        // Web environment
+        echo "<pre>" . htmlspecialchars($error_message) . "</pre>";
+        echo "<p><a href='config_wizard.php'>Run Configuration Wizard</a></p>";
+    } else {
+        // Command line environment
+        echo $error_message;
+    }
+    
+    exit(1);
+}
+
+// Set charset to UTF-8
+$conn->set_charset("utf8");
+?>
