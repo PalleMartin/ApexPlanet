@@ -1,0 +1,105 @@
+/* css/admin-dashboard.css */
+
+.charts-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.chart-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+}
+
+.chart-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Recent activity section */
+.recent-activity {
+    padding: 60px 0;
+}
+
+.recent-activity h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.activity-icon {
+    font-size: 1.8rem;
+}
+
+.activity-content h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.activity-content p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.activity-time {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .chart-row {
+        flex-direction: column;
+    }
+    
+    .chart-container {
+        width: 100%;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .charts-section {
+        padding: 40px 0;
+    }
+    
+    .chart-container {
+        padding: 20px;
+    }
+    
+    .chart-container canvas {
+        height: 250px !important;
+    }
+}
