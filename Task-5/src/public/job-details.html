@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details - JobBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/job-details.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JobBoard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html" class="active">Jobs</a></li>
+                    <li><a href="companies.html">Companies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="job-details">
+            <div class="container">
+                <div class="job-details-container">
+                    <div class="job-header">
+                        <h1 id="job-title">Loading...</h1>
+                        <span class="salary" id="job-salary">$0 - $0</span>
+                    </div>
+                    
+                    <div class="job-meta" id="job-meta">
+                        <span id="job-company">Company</span>
+                        <span id="job-location">Location</span>
+                        <span id="job-type">Job Type</span>
+                    </div>
+                    
+                    <div class="job-description">
+                        <h2>Job Description</h2>
+                        <p id="job-description">Loading job description...</p>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h2>Requirements</h2>
+                        <ul id="job-requirements">
+                            <li>Loading requirements...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-company">
+                        <h2>About the Company</h2>
+                        <div class="company-info" id="company-info">
+                            <h3 id="company-name">Loading company...</h3>
+                            <p id="company-description">Loading company description...</p>
+                            <a href="#" id="company-website" target="_blank">Visit Website</a>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary" id="apply-button">Apply for this Job</button>
+                        <button class="btn btn-outline" id="save-button">Save Job</button>
+                    </div>
+                </div>
+                
+                <div class="application-form-container" id="application-form-container" style="display: none;">
+                    <h2>Apply for this Position</h2>
+                    <form id="application-form">
+                        <input type="hidden" id="job-id" value="">
+                        <div class="form-group">
+                            <label for="cover-letter">Cover Letter</label>
+                            <textarea id="cover-letter" name="cover-letter" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Resume (URL)</label>
+                            <input type="url" id="resume" name="resume" placeholder="https://example.com/resume.pdf">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+                        <button type="button" class="btn btn-outline btn-block" id="cancel-application">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobBoard</h3>
+                    <p>Connecting talented professionals with great companies worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobBoard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/job-details.js"></script>
+</body>
+</html>

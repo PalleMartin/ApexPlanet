@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Jobs - JobBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JobBoard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html" class="active">Jobs</a></li>
+                    <li><a href="companies.html">Companies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="jobs-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Browse Jobs</h1>
+                    <p>Find the perfect job that matches your skills and interests</p>
+                </div>
+
+                <div class="jobs-content">
+                    <aside class="filters-sidebar">
+                        <div class="filter-section">
+                            <h3>Filter by</h3>
+                            <form id="job-filters-form">
+                                <div class="form-group">
+                                    <label for="search-keyword">Keywords</label>
+                                    <input type="text" id="search-keyword" placeholder="Job title, keywords...">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="search-location">Location</label>
+                                    <input type="text" id="search-location" placeholder="City, state, or remote">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="job-category">Category</label>
+                                    <select id="job-category">
+                                        <option value="">All Categories</option>
+                                        <option value="1">Technology</option>
+                                        <option value="2">Data Science</option>
+                                        <option value="3">Product Management</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="job-type">Job Type</label>
+                                    <select id="job-type">
+                                        <option value="">All Types</option>
+                                        <option value="Full-time">Full-time</option>
+                                        <option value="Part-time">Part-time</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Freelance">Freelance</option>
+                                        <option value="Internship">Internship</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="salary-range">Salary Range</label>
+                                    <select id="salary-range">
+                                        <option value="">Any Salary</option>
+                                        <option value="0-50000">$0 - $50,000</option>
+                                        <option value="50000-100000">$50,000 - $100,000</option>
+                                        <option value="100000-150000">$100,000 - $150,000</option>
+                                        <option value="150000+">$150,000+</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+                                <button type="button" class="btn btn-outline btn-block" id="reset-filters">Reset Filters</button>
+                            </form>
+                        </div>
+                    </aside>
+
+                    <div class="jobs-main">
+                        <div class="jobs-toolbar">
+                            <div class="results-count">
+                                <p>Showing <span id="results-count">0</span> jobs</p>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sort-by">Sort by:</label>
+                                <select id="sort-by">
+                                    <option value="newest">Newest</option>
+                                    <option value="oldest">Oldest</option>
+                                    <option value="salary-high">Salary (High to Low)</option>
+                                    <option value="salary-low">Salary (Low to High)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="jobs-container" id="jobs-container">
+                            <!-- Jobs will be loaded here dynamically -->
+                            <div class="loading">Loading jobs...</div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="btn btn-outline" id="prev-page">Previous</button>
+                            <span class="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                            <button class="btn btn-outline" id="next-page">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobBoard</h3>
+                    <p>Connecting talented professionals with great companies worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobBoard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jobs.js"></script>
+</body>
+</html>

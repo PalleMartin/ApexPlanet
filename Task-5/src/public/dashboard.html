@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - JobBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JobBoard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <button class="dropbtn">John Doe ▼</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-hero">
+            <div class="container">
+                <h1>Welcome back, John!</h1>
+                <p>Here's what's happening with your job search today.</p>
+            </div>
+        </section>
+
+        <section class="dashboard-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Applied Jobs</h3>
+                        <span class="stat-number">12</span>
+                        <p>+2 from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Saved Jobs</h3>
+                        <span class="stat-number">8</span>
+                        <p>+1 from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Interviews</h3>
+                        <span class="stat-number">3</span>
+                        <p>+1 scheduled</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Messages</h3>
+                        <span class="stat-number">5</span>
+                        <p>2 unread</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <div class="container">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-content">
+                            <h4>You applied for "Senior Frontend Developer"</h4>
+                            <p>at Google Inc.</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-content">
+                            <h4>Your application was viewed</h4>
+                            <p>for "UX Designer" at Microsoft</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">📅</div>
+                        <div class="activity-content">
+                            <h4>Interview scheduled</h4>
+                            <p>for "Data Scientist" at Amazon</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommended-jobs">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recommended for You</h2>
+                    <a href="jobs.html" class="view-all">View All</a>
+                </div>
+                <div class="jobs-grid">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Backend Developer</h3>
+                            <span class="salary">$80,000 - $110,000</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>Facebook</span>
+                            <span>Menlo Park, CA</span>
+                            <span>Full-time</span>
+                        </div>
+                        <p>Looking for an experienced backend developer with Node.js expertise.</p>
+                        <div class="job-footer">
+                            <span class="posted">Posted 1 day ago</span>
+                            <a href="#" class="btn btn-small">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Product Manager</h3>
+                            <span class="salary">$95,000 - $130,000</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>Netflix</span>
+                            <span>Los Angeles, CA</span>
+                            <span>Full-time</span>
+                        </div>
+                        <p>Join our product team to drive innovation and user growth.</p>
+                        <div class="job-footer">
+                            <span class="posted">Posted 2 days ago</span>
+                            <a href="#" class="btn btn-small">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobBoard</h3>
+                    <p>Connecting talented professionals with great companies worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobBoard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

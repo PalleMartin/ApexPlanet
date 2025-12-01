@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - JobBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-logo">
+                <h1>JobBoard</h1>
+            </div>
+            <h2>Verify Your Email</h2>
+            <p>Enter the 6-digit code sent to your email address</p>
+            
+            <form id="otp-form">
+                <div class="otp-inputs">
+                    <label for="otp-1" class="sr-only">First digit</label>
+                    <input type="text" id="otp-1" class="otp-input" maxlength="1" placeholder="0" aria-label="First digit of OTP">
+                    <label for="otp-2" class="sr-only">Second digit</label>
+                    <input type="text" id="otp-2" class="otp-input" maxlength="1" placeholder="0" aria-label="Second digit of OTP">
+                    <label for="otp-3" class="sr-only">Third digit</label>
+                    <input type="text" id="otp-3" class="otp-input" maxlength="1" placeholder="0" aria-label="Third digit of OTP">
+                    <label for="otp-4" class="sr-only">Fourth digit</label>
+                    <input type="text" id="otp-4" class="otp-input" maxlength="1" placeholder="0" aria-label="Fourth digit of OTP">
+                    <label for="otp-5" class="sr-only">Fifth digit</label>
+                    <input type="text" id="otp-5" class="otp-input" maxlength="1" placeholder="0" aria-label="Fifth digit of OTP">
+                    <label for="otp-6" class="sr-only">Sixth digit</label>
+                    <input type="text" id="otp-6" class="otp-input" maxlength="1" placeholder="0" aria-label="Sixth digit of OTP">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Verify Email</button>
+                <div class="resend-code">
+                    <p>Didn't receive the code? <a href="#" id="resend-otp">Resend</a> <span class="timer">02:00</span></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Start the timer when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startTimer(120); // 2 minutes
+        });
+    </script>
+</body>
+</html>

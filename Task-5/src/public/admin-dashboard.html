@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JobBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JobBoard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="admin-users.html">Users</a></li>
+                    <li><a href="admin-jobs.html">Jobs</a></li>
+                    <li><a href="admin-reports.html">Reports</a></li>
+                    <li><a href="admin-settings.html">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <button class="dropbtn">Admin User ▼</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-hero">
+            <div class="container">
+                <h1>Admin Dashboard</h1>
+                <p>Platform overview and analytics</p>
+            </div>
+        </section>
+
+        <section class="dashboard-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <span class="stat-number" id="total-users">0</span>
+                        <p id="users-change">+0 from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Jobs</h3>
+                        <span class="stat-number" id="total-jobs">0</span>
+                        <p id="jobs-change">+0 from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Applications</h3>
+                        <span class="stat-number" id="total-applications">0</span>
+                        <p id="applications-change">+0 from last week</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Jobs</h3>
+                        <span class="stat-number" id="active-jobs">0</span>
+                        <p id="active-jobs-change">+0 from last week</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="container">
+                <div class="chart-row">
+                    <div class="chart-container">
+                        <h2>Applications Over Time</h2>
+                        <canvas id="applicationsChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Jobs by Category</h2>
+                        <canvas id="categoriesChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-row">
+                    <div class="chart-container">
+                        <h2>Applications by Status</h2>
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Users by Type</h2>
+                        <canvas id="usersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <div class="container">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-content">
+                            <h4>New job posted</h4>
+                            <p>"Senior Backend Developer" at Facebook</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-content">
+                            <h4>New user registered</h4>
+                            <p>John Smith as job seeker</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-content">
+                            <h4>Application status updated</h4>
+                            <p>Application #1245 marked as "Interview Scheduled"</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobBoard</h3>
+                    <p>Connecting talented professionals with great companies worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobBoard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
